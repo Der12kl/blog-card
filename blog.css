@@ -1,0 +1,134 @@
+:root {
+    /* Color variables */
+    --color-1: #ff0000; /* Main background color */
+    --color-2: #00ff00; /* Secondary background color */
+    --color-3: #0000ff;
+    --color-4: #ffff00;
+    --color-5: #00ffff;
+    /* Text color variables */
+    --text-color-1: #fff; /* Main text color */
+    --text-color-2: #000000; /* Secondary text color */
+    --text-color-3: #fff;
+    --text-color-4: #000000;
+    --text-color-5: #000000;
+}
+body {
+    /*body styles */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.blog-card {
+    /* blog card styles */
+    background-color: var(--color-1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    animation: color-flash 50s infinite;
+    transform: scale(1);
+    color: var(--text-color-1);
+}
+@keyframes color-flash {
+    /* Animation styles */
+    0%, 20% {background-color: var(--color-1);/* Start with main background color */
+    color: var(--text-color-1);}  /* Start with main text color */
+    25%, 45% {background-color: var(--color-2); /* Transition to secondary background color */
+    color : var(--text-color-2);} /* Transition to secondary text color */
+    50%, 70% {background-color: var(--color-3);
+    color: var(--text-color-3);}
+    75%, 95% {background-color: var(--color-4);
+    color: var(--text-color-4);}
+    100% {background-color: var(--color-5);
+    color: var(--text-color-5);}
+}
+.blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.blog-card img.nature {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+.blog-card:hover img.nature {
+    opacity: 0.75;
+}
+.blog-card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    height: 150px;
+    width: 60%;
+}
+.blog-card .content h3 {
+    font-size: 1.25em;
+    margin: 0;
+}
+.blog-card .content p {
+    margin: 10px 0;
+}
+.blog-card .tag {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+.blog-card:hover .tag {
+    background-color: #1e3a8a;
+}
+
+@media (max-width: 647px) {
+    .blog-card {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 10px auto; /* Center the card */
+    }
+    .blog-card img.nature {
+        width: 50%; 
+    }
+    .blog-card .content {
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        height: auto;
+        width: 50%; 
+    }
+    .blog-card .content h3 {
+        font-size: 1.2em;
+    }
+    .blog-card .content p {
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 648px) {
+    .blog-card {
+        flex-direction: row; /* Display content side by side on larger screens */
+    }
+    .blog-card img.nature {
+        width: 50%;
+    }
+    .blog-card .content {
+        width: 50%;
+    }
+}
