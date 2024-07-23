@@ -71,10 +71,11 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+    max-height: 400px;
     transition: opacity 0.3s ease-in-out;
 }
 .blog-card:hover img.nature {
-    opacity: 0.75;
+    opacity: 0.85;
 }
 .blog-card .content {
     display: flex;
@@ -124,6 +125,7 @@ body {
 @media (max-width: 505px) {
     .blog-card {
         flex-direction: column;
+        text-align: center;
     }
     .blog-card .img-container {
         width: 100%;
@@ -166,7 +168,7 @@ body {
     }
     .blog-card img.nature {
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
         height: auto;
         max-height: none;
     }
