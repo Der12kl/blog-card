@@ -42,7 +42,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 ## Project Structure
 
-- `index.html: The main HTML file containing the structure of the blog card.
+- `index.html`: The main HTML file containing the structure of the blog card.
 - `blog.css`: The stylesheet for styling the blog card, including animations and responsive design.
 - `Nature.jpg`: The image used in the blog card.
 - `package.json`: Contains project metadata and dependencies.
