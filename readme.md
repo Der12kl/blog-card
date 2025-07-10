@@ -68,5 +68,3 @@ If you wish to contribute to this project, please follow these steps:
 
 Thank you for contributing!
 
-Contact
-Evgeny - superlern4@gmail.com
